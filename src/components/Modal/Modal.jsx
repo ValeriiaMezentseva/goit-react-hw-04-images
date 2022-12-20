@@ -20,7 +20,7 @@ const Modal = ({image, tags, toggle}) => {
         return () => {
             window.removeEventListener('keydown', onKeyDown);
         };
-    });
+    }, [toggle]);
     
     const clickOnBackdrop = e => {
         if (e.target === e.currentTarget) {
